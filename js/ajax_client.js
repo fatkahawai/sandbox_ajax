@@ -13,6 +13,13 @@ window.onload = function() {
         data,
         jqxhr;
         
+// CROSS_DOMAIN AJAX TEST MAR2013 - GET AND DISPLAY MY PUBLIC IP ADDRESS 
+// NB: this doesnt work because the brwoser will block ajax requests to domains other than
+// the domain that served the index.html file
+    $.getJSON("http://api.exip.org/?call=ip", function(data){
+      console.log("getting my public IP address. api.exip.org returned: "+data );
+    });
+// END OF CROSS_DOMAIN TEST CODE
 
     // Take care of some UI details
     var ajaxString = prompt("Enter the ajax string to follow the URL");     // Get user's nickname

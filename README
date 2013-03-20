@@ -1,1 +1,17 @@
 README
+
+js.sandbox.ajax
+
+an example of a JSONP request - an ajax request which returns a JSON object which can be directly referenced.
+
+ajax_server.js is a node.js application. its an http server which servers html and js files,
+and also responds to JSONP requests
+
+to start, open terminal window and run node with the ajax_server.js file as argument
+    > node ajax_server.js
+
+this starts the http server on http://localthost using port 8000
+
+When a user now browses to http://localhost:8000, index.html is loaded (served by ajax_server), 
+index.html loads the ajax_client.js file with the JSON query logic.
+
